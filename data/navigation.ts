@@ -23,4 +23,8 @@ export const navigation = [
         label: "Nasıl Çalışır?",
         href: "/nasil-calisir",
     },
+    {
+        label: "İletişim",
+        href: "/iletisim",
+    },
 ];

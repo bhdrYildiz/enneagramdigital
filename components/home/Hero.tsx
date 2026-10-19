@@ -12,23 +12,21 @@ const highlights = [
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-brand-white py-20 sm:py-24 lg:py-32">
-            {/* Dekoratif arka plan */}
+        <section className="relative overflow-hidden bg-brand-white pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-8 lg:pb-24">
             <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-soft blur-3xl" />
-
             <Container>
-                <div className="relative grid items-center gap-16 lg:grid-cols-2 lg:gap-12">
+                <div className="relative grid min-w-0 items-center gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10 xl:gap-14">
                     {/* Sol içerik */}
-                    <div>
+                    <div className="min-w-0">
                         <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white px-4 py-2">
-                            <span className="h-2 w-2 rounded-full bg-brand-orange" />
+                            <span className="h-2 w-2 shrink-0 rounded-full bg-brand-orange" />
 
                             <span className="text-xs font-semibold tracking-wide text-brand-text">
                                 İNSAN ODAKLI DİJİTAL GELİŞİM
                             </span>
                         </div>
 
-                        <h1 className="mt-8 max-w-2xl text-4xl font-extrabold leading-[1.15] tracking-tight text-brand-navy sm:text-5xl lg:text-6xl">
+                        <h1 className="mt-8 max-w-2xl text-4xl font-extrabold leading-[1.15] tracking-tight text-brand-navy sm:text-5xl lg:text-[clamp(2.5rem,4vw,3.75rem)]">
                             İnsanı anlamak,
                             <span className="block text-brand-orange">gelişimi dönüştürür.</span>
                         </h1>
@@ -50,7 +48,7 @@ export default function Hero() {
                             </Link>
 
                             <Link
-                                href="/iletisim"
+                                href="/iletisim?konu=demo"
                                 className="inline-flex items-center justify-center rounded-xl border border-brand-border bg-white px-7 py-4 text-sm font-semibold text-brand-navy transition hover:border-brand-blue hover:bg-brand-soft"
                             >
                                 Demo Talep Et
@@ -75,7 +73,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    {/* Sağ platform görseli */}
+                    {/* Sağ görsel galerisi */}
                     <HeroVisual />
                 </div>
             </Container>

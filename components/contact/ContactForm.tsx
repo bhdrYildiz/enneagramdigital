@@ -261,31 +261,6 @@ export default function ContactForm() {
                         className={`${fieldClassName} resize-y`}
                     />
                 </div>
-
-                <label className="flex cursor-pointer items-start gap-3">
-                    <input
-                        type="checkbox"
-                        required
-                        checked={values.consent}
-                        onChange={(event) => updateField("consent", event.target.checked)}
-                        className="mt-1 h-4 w-4 shrink-0 accent-brand-blue"
-                    />
-
-                    <span className="text-xs leading-6 text-brand-text">
-                        İletişim talebimin değerlendirilmesi ve tarafıma dönüş yapılması amacıyla
-                        paylaştığım bilgilerin işlenmesine ilişkin{" "}
-                        <a
-                            href="/kvkk"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-bold text-brand-blue underline underline-offset-2"
-                        >
-                            KVKK Aydınlatma Metni'ni
-                        </a>{" "}
-                        okudum. *
-                    </span>
-                </label>
-
                 {status !== "idle" && (
                     <div
                         role={status === "error" ? "alert" : "status"}
@@ -315,10 +290,6 @@ export default function ContactForm() {
 
                     {!submitting && <HiArrowRight size={19} />}
                 </button>
-
-                <p className="text-center text-xs leading-6 text-brand-text">
-                    Bilgileriniz yalnızca talebinizin değerlendirilmesi amacıyla kullanılmalıdır.
-                </p>
             </form>
         </div>
     );

@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Manrope } from "next/font/google";
-
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import NavigationLoader from "@/components/shared/NavigationLoader";
+import { Suspense } from "react";
+import CookieConsent from "@/components/shared/CookieConsent";
+import AnalyticsLoader from "@/components/shared/AnalyticsLoader";
+import FloatingSocialMenu from "@/components/shared/FloatingSocialMenu";
 
 import "./globals.css";
 
@@ -33,9 +37,22 @@ export default function RootLayout({
                 className={`${manrope.variable} min-h-screen bg-brand-white text-brand-navy antialiased`}
             >
                 <div className="flex min-h-screen flex-col">
-                    <Header />
-                    <div className="flex-1">{children}</div>
-                    <Footer />
+                    <Suspense fallback={null}>
+                        <NavigationLoader>
+                            <Header />
+
+                            {children}
+
+                            <Footer />
+
+                            <CookieConsent />
+                            <FloatingSocialMenu />
+                        </NavigationLoader>
+                    </Suspense>
+
+                    <Suspense fallback={null}>
+                        <AnalyticsLoader />
+                    </Suspense>
                 </div>
             </body>
         </html>

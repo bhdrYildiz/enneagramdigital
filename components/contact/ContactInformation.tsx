@@ -38,31 +38,6 @@ export default function ContactInformation() {
                     </div>
                 ))}
             </div>
-
-            <div className="mt-12 rounded-3xl border border-brand-border bg-brand-soft p-6 sm:p-8">
-                <div className="flex items-center gap-3">
-                    <HiChatBubbleLeftRight size={25} className="text-brand-blue" />
-
-                    <h3 className="text-lg font-extrabold text-brand-navy">
-                        Demo görüşmesinde neler var?
-                    </h3>
-                </div>
-
-                <div className="mt-6 space-y-4">
-                    {[
-                        "Platformun genel tanıtımı",
-                        "Kullanım alanlarının değerlendirilmesi",
-                        "Mizaç analizi ve raporlama yaklaşımı",
-                        "Sorularınızın yanıtlanması",
-                    ].map((item) => (
-                        <div key={item} className="flex items-start gap-3">
-                            <HiCheckCircle size={20} className="mt-0.5 shrink-0 text-brand-blue" />
-
-                            <span className="text-sm leading-6 text-brand-navy">{item}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
         </div>
     );
 }

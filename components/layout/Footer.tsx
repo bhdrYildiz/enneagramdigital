@@ -150,10 +150,20 @@ export default function Footer() {
 
                 {/* Alt çizgi */}
                 <div className="border-t border-brand-border py-6">
-                    <div className="flex flex-col gap-5 items-center">
-                        <p className="text-xs leading-6 text-brand-text">
+                    <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+                        <p className="text-center text-xs leading-6 text-brand-text sm:text-left">
                             © 2026 EnneagramDigital. Tüm hakları saklıdır.
                         </p>
+
+                        <button
+                            type="button"
+                            onClick={() => {
+                                window.dispatchEvent(new Event("open-cookie-settings"));
+                            }}
+                            className="text-xs cursor-pointer font-semibold text-brand-text transition-colors hover:text-brand-orange focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+                        >
+                            Çerez Tercihleri
+                        </button>
                     </div>
                 </div>
             </Container>

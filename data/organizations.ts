@@ -72,4 +72,28 @@ export const organizations: Organization[] = [
         name: "Suku Anaokulu",
         logo: "/images/schools/suku-anaokulu.webp",
     },
+    {
+        name: "Dyson",
+        logo: "/images/schools/dyson-logo.png",
+    },
+    {
+        name: "Hero Baby",
+        logo: "/images/schools/herobabylogo.png",
+    },
+    {
+        name: "Türk Kızılay",
+        logo: "/images/schools/kizilay.png",
+    },
+    {
+        name: "Maya",
+        logo: "/images/schools/maya-logo.png",
+    },
+    {
+        name: "Türk Hava Yolları",
+        logo: "/images/schools/thy-logo.png",
+    },
+    {
+        name: "Vizyon",
+        logo: "/images/schools/vizyon-logo.png",
+    },
 ];

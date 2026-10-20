@@ -44,15 +44,9 @@ export default function HeroVisual() {
 
     return (
         <div className="relative mx-auto w-full min-w-0 max-w-3xl">
-            {/* Arka plan ışığı */}
             <div className="pointer-events-none absolute -inset-5 rounded-[3rem] bg-brand-soft blur-3xl" />
-
-            {/* Dekoratif noktalar */}
             <div className="pointer-events-none absolute -right-3 top-8 h-20 w-20 rounded-full bg-brand-orange/10 blur-2xl" />
-
-            {/* Ana görsel */}
             <div className="relative overflow-hidden rounded-[24px] border border-brand-border bg-white shadow-2xl shadow-brand-navy/15">
-                {/* Tarayıcı üst çubuğu */}
                 <div className="flex items-center justify-between gap-3 border-b border-brand-border bg-white px-4 py-3 sm:px-5">
                     <div className="flex items-center gap-1.5">
                         <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
@@ -66,8 +60,6 @@ export default function HeroVisual() {
 
                     <HiOutlinePhotograph size={17} className="shrink-0 text-brand-text/60" />
                 </div>
-
-                {/* Görsel geçişi */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-brand-soft">
                     <AnimatePresence mode="wait">
                         <motion.div
